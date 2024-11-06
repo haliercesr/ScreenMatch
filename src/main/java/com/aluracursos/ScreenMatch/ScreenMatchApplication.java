@@ -1,6 +1,6 @@
 package com.aluracursos.ScreenMatch;
 
-import com.aluracursos.ScreenMatch.service.ConsumoAPI;
+import com.aluracursos.ScreenMatch.principal.Principal;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,8 +14,8 @@ public class ScreenMatchApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		ConsumoAPI consumoAPI = new ConsumoAPI();
-		var json = consumoAPI.obtenerDatos("http://www.omdbapi.com/?t=encanto&apikey=24a1975d");
-		System.out.println(json);
+		Principal principal = new Principal();
+		principal.muestraElMenu();
+
 	}
 }
